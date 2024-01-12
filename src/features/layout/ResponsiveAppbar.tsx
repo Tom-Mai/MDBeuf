@@ -1,5 +1,5 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
+import { AppBar } from '@mui/material';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
@@ -11,8 +11,10 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Stack from '@mui/material/Stack';
 import { Link } from 'react-router-dom';
+
 import logo from './../../assets/images/logo.png';
 import logomobile from './../../assets/images/logomobile.png'
+import Image from 'next/image';
 
 
 const linkColor = "#4a4a54";
@@ -27,18 +29,22 @@ function ResponsiveAppBar({ routes }) {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-
+ // <AppBar position="fixed" elevation={4} zIndex={1100} sx={{ color: "#787878", backgroundColor: 'rgba(255, 255, 255, 0.8)', backdropFilter: "blur(1px)" }}>
   return (
-    <AppBar position="fixed" elevation={4} zindex={1100} sx={{ color: "#787878", backgroundColor: 'rgba(255, 255, 255, 0.8)', backdropFilter: "blur(1px)" }}>
+ 
+    <AppBar position='fixed' elevation={4} sx={{color:"#787878",backgroundColor: 'rgba(255, 255, 255, 0.8)', backdropFilter: "blur(1px)",zIndex:'1100' }}>
+
+   
       <Container sx={{ margin: 0, maxWidth: "none", "@media (min-width: 1200px)": { maxWidth: "100%" } }} className='ContainerMAIN'>
         <Toolbar disableGutters>
           <Box display="flex" justifyContent="space-between" width="100%" sx={{ maxHeight: "120px" }}>
             <Box sx={{ width: '100%' }} display="flex" alignItems="center">
               <Box sx={{ boxSizing: 'border-box', pt: 2, display: { xs: 'none', md: 'block' } }}>
-                <img src={logo} alt="Logo Maurine Dubeuf HEILPRAKTIKER - NUTRITIONNISTE" />
+                
+                <Image src={logo} alt="Logo Maurine Dubeuf HEILPRAKTIKER - NUTRITIONNISTE" />
               </Box>
               <Box sx={{ display: { xs: 'block', md: 'none' }, width: 100, position: 'relative', margin: '0 auto' }}>
-                <img src={logomobile} alt="Logo Maurine Dubeuf HEILPRAKTIKER - NUTRITIONNISTE" />
+                <Image src={logomobile} alt="Logo Maurine Dubeuf HEILPRAKTIKER - NUTRITIONNISTE" />
               </Box>
             </Box>
             <Box className='AppBar' display="flex" alignItems="center" sx={{ minWidth: 'fit-content' }}>
