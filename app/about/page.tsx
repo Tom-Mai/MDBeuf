@@ -7,7 +7,7 @@ import { HeroSection } from "@/src/features/layout/HeroSection";
 import { SectionContent } from "@/src/features/layout/SectionContent";
 
 const Aboutme = () => {
-    return (<div>
+    return (<Grid>
         <HeroSection/>
         <SectionContent 
             titreText="Maurine DuBeuf 27 ans" 
@@ -27,7 +27,7 @@ const Aboutme = () => {
             imgSrc={Images.Maurinedb[0]}
             />
 
-    </div>
+    </Grid>
     )
 }
 export default Aboutme;
