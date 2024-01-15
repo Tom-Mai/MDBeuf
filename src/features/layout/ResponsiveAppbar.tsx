@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from 'react';
 import { AppBar } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -10,21 +12,28 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Stack from '@mui/material/Stack';
-import { Link } from 'react-router-dom';
 
-import logo from './../../assets/images/logo.png';
-import logomobile from './../../assets/images/logomobile.png'
+
+import logo from '@/app/assets/logo.png';
+import logomobile from '@/app/assets/logomobile.png'
 import Image from 'next/image';
+import Link from 'next/link';
 
 
 const linkColor = "#4a4a54";
 
-function ResponsiveAppBar({ routes }) {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+interface Route {
+  path: string;
+  label: string;
+}
 
-  const handleOpenNavMenu = (event) => {
+function ResponsiveAppBar({ routes }: { routes: Route[] }) {
+  const [anchorElNav, setAnchorElNav] = React.useState<HTMLElement | null>(null);
+
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorElNav(event.currentTarget);
   };
+  
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -69,15 +78,18 @@ function ResponsiveAppBar({ routes }) {
                     sx={{ display: { xs: 'block', md: 'none' } }}
                   >
                     {routes.map((route) => (
-                      <MenuItem component={Link} to={route.path} key={route.path} onClick={handleCloseNavMenu}>
+                      <Link href={route.path} key={route.path}>
+                      <MenuItem onClick={handleCloseNavMenu}>
                         <Typography textAlign="center">{route.label}</Typography>
                       </MenuItem>
+                      </Link>
                     ))}
                   </Menu>
            
               </Box>
               <Stack direction="row" spacing={2} sx={{ boxSizing: 'content-box', flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {routes.map((route) => (
+                  <Link href={route.path} key={route.path} passHref>
                   <Button
                     sx={{
                       textAlign: 'center',
@@ -91,13 +103,11 @@ function ResponsiveAppBar({ routes }) {
                       },
                     }}
                     variant='text'
-                    component={Link}
-                    to={route.path}
-                    key={route.path}
                     onClick={handleCloseNavMenu}
                   >
                     {route.label}
                   </Button>
+                  </Link>
                 ))}
               </Stack>
             </Box>
