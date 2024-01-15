@@ -5,11 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 18px;
-  font-family: Roboto, serif;
-  @media (min-width: 1024px) {
-    font-size: 18px;
-  }
+  font-size: 1vh;
 }
 :root{
 --Title: #4a4a54;
