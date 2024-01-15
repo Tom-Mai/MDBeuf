@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import { HeroSection } from "@/src/features/layout/HeroSection";
 // import Sanity from "../../Sanity";
 
-import { Images } from "../assets/Images";
+import { Images } from "./assets/Images";
 import { SectionContent } from "@/src/features/layout/SectionContent";
 const HomePage = () => {
     return (
