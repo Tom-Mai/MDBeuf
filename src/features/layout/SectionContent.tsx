@@ -17,13 +17,12 @@ interface SectionContentProps {
 }
 export const SectionContent = ({ imgSrc, bodyText, titreText, imgToLeft }:SectionContentProps ) => {
     const textComponent = (
-        <Grid item xs="12" lg={imgSrc ? 6 : 12}>
+        <Grid item xs={12} lg={imgSrc ? 6 : 12}>
             {bodyText &&
                 <Typography variant='body1' sx={{
                     marginTop: '20px',
                     lineHeight: "1.35",
                     fontSize: "1.37rem",
-                    fontFamily: "Raleway",
                     fontWeight: "700",
                     textAlign: "justify",
                 }}>
