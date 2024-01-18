@@ -22,8 +22,8 @@ export const SectionContent = ({ imgSrc, bodyText, titreText, imgToLeft }:Sectio
                 <Typography variant='body1' sx={{
                     marginTop: '20px',
                     lineHeight: "1.35",
-                    fontSize: "1.37rem",
-                    fontWeight: "700",
+                    fontSize: "1.65rem",
+                    color:'#707070',
                     textAlign: "justify",
                 }}>
                     {bodyText}
