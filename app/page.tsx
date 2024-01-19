@@ -60,6 +60,12 @@ const HomePage = () => {
                 
                 Dans tous les cas, un suivi médical est recommandé. `}
             />
+            <SectionContent
+            bodyText={ 
+                `En France,nous avons tendance à attendre d’être malade (et d'atteindre le stade 4) avant de consulter. Alors que nous pouvons agir bien avant le stade de la maladie afin d'éviter certaines souffrances.`
+                
+            }
+            />
 
         </div>
     )
