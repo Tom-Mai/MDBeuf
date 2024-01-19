@@ -5,12 +5,28 @@ import Grid from "@mui/material/Grid";
 import { Images } from "@/app/assets/Images";
 import { HeroSection } from "@/src/features/layout/HeroSection";
 import { SectionContent } from "@/src/features/layout/SectionContent";
+import { cp } from "fs";
+import { Birthstone } from "next/font/google";
+
+const AgeCalcul = () => {
+    const today = new Date();
+    const BirthDate = new Date("1995-06-10");
+    
+    let age = today.getFullYear() - BirthDate.getFullYear();
+    let m = today.getMonth() - BirthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < BirthDate.getDate())){
+        age--;
+    }
+    return age;
+};
 
 const Aboutme = () => {
+    const age = AgeCalcul();
     return (<Grid>
         <HeroSection/>
-        <SectionContent 
-            titreText="Maurine DuBeuf 27 ans" 
+        <SectionContent
+            // eslint-disable-next-line react/no-unescaped-entities
+            titreText={<>"Maurine DuBeuf {age} ans"</> }
             bodyText={`D'un naturel chaleureux et bienveillant, j'attache beaucoup d'importance à mes relations avec les autres. Il était donc primordial pour moi de choisir un métier dans lequel je peux aider, accompagner et apporter un touche de bonheur aux gens. 
 
             Passionnée depuis toujours par la nutrition et le bien-être au naturel, j'aurai un réel plaisir à vous découvrir et vous accompagnez dans le chemin du mieux-être.
@@ -28,6 +44,7 @@ const Aboutme = () => {
             />
 
     </Grid>
+    
     )
 }
 export default Aboutme;
