@@ -26,7 +26,7 @@ interface SectionContentProps {
         alt: string;
     };
     bodyText?: React.ReactNode;
-    titreText?: string;
+    titreText?: React.ReactNode;
     imgToLeft?: boolean;
 }
 export const SectionContent = ({ imgSrc, bodyText, titreText, imgToLeft }: SectionContentProps) => {
