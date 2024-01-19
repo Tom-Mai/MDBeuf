@@ -13,13 +13,15 @@
 --bgColor : #f9f9f9;
 --AppBar :rgba(224, 224, 213, 0.8);
 }
-
+.highlight{
+  font-size: 1.65rem;
+  color:#b08d57;
+}
 .App {
   max-width: 100%;
   text-align: center;
   background-color: var(--bgColor);
   min-height: 100vh;
-  overflow: hidden;
   color: var(--default-color);
   }
   
