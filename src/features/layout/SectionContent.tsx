@@ -8,9 +8,9 @@ import Image, { StaticImageData } from "next/image";
 
 //  fonction qui prend mon tableau de mots cles, et si le mot cles se trouve dans la props bodytext, celui ci prends une autre classe de style afin d'être mis en évidence
 function highlightText(text: string, keywords: string[]): React.ReactNode {
-    const regex = new RegExp(`(${keywords.join('|')})`, 'gi');
+    const regex = new RegExp(`\\b(${keywords.join('s?\\b|')}s?\\b)`, 'gi');
     return text.split(regex).map((part, index) => {
-        if (keywords.includes(part.toLowerCase())) {
+        if (new RegExp(`\\b(${keywords.join('s?\\b|')}s?\\b)`, 'i').test(part)) {
             return (
                 <strong key={index} className="highlight">{part}</strong>
             )
@@ -31,7 +31,7 @@ interface SectionContentProps {
 }
 export const SectionContent = ({ imgSrc, bodyText, titreText, imgToLeft }: SectionContentProps) => {
 
-    const highlightWords = ["naturopathie", "Organisation Mondiale de la Santé", "méthodes de soins", "moyens naturels et biologiques", "approche holistique", "individu", "naturopathe", "symptômes", "hygiène de vie", "accompagnement individualisé", "auto-guérison", "médecine traditionnelle chinoise", "ayurvédique", "diagnostic", "bien-être", "hygiène alimentaire", "musculaire", "neuropsychique", "hydrologie", "phytologie", "aromatologie", "réflexologie plantaire", "exercices respiratoires", "massages", "magnétisme", "fatigue", "énergie", "problèmes digestifs", "dysfonctionnement", "symptôme", "pluridisciplinaire", "déséquilibre", "réactions corporelles", "suivi médical", "prévention", "maladie"];
+    const highlightWords = ["naturopathie", "Organisation Mondiale de la Santé", "méthode de soin", "moyen naturel et biologique", "approche holistique", "individu", "naturopathe", "symptôme", "hygiène de vie", "accompagnement individualisé", "auto-guérison", "médecine traditionnelle chinoise", "ayurvédique", "diagnostic", "bien-être", "hygiène alimentaire", "musculaire", "neuropsychique", "hydrologie", "phytologie", "aromatologie", "réflexologie plantaire", "exercice respiratoire", "massage", "magnétisme", "fatigue", "énergie", "problème digestif", "dysfonctionnement", "pluridisciplinaire", "déséquilibre", "réaction corporelle", "suivi médical", "prévention", "maladie"];
 
     const formattedBodyText = typeof bodyText === 'string' ? highlightText(bodyText, highlightWords) : bodyText;
     const textComponent = (
