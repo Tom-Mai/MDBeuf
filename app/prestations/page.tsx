@@ -10,7 +10,10 @@ export default function prestations() {
   return (
     <Grid>
     <HeroSection/>
-    <SectionContent/>
+    <SectionContent
+    titreText="HOLA "
+    bodyText="OKEEEE"
+    />
     </Grid>
   )
 }
