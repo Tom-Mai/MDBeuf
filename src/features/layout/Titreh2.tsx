@@ -2,7 +2,7 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 // Definir une iterface pour props 
 interface Titreh2Props {
-    textContent: string;
+    textContent: React.ReactNode;
 }
 
 export const Titreh2 = ({textContent}: Titreh2Props) => {
