@@ -3,7 +3,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import { Titreh2 } from "./Titreh2";
+
 import Image, { StaticImageData } from "next/image";
 
 //  fonction qui prend mon tableau de mots cles, et si le mot cles se trouve dans la props bodytext, celui ci prends une autre classe de style afin d'être mis en évidence
