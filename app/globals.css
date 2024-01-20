@@ -17,6 +17,9 @@
   font-size: 1.65rem;
   color:#b08d57;
 }
+.menu-typography{
+  font-size: 1.5rem;
+}
 .App {
   max-width: 100%;
   text-align: center;
