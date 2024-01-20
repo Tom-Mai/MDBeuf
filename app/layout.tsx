@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const routes =[
   {path: '/', label:'La Naturopathie'},
   {path:'/about',label:'Qui suis-je ?'},
-  {path:'/prestations',label:'Mes'},
+  {path:'/prestations',label:'Mes prestations'},
   {path:'/contact',label:'Contact'},
 ]
 export default function RootLayout({
