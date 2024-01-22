@@ -7,6 +7,7 @@ import { HeroSection } from "@/src/features/layout/HeroSection";
 import { SectionContent } from "@/src/features/layout/SectionContent";
 import { cp } from "fs";
 import { Birthstone } from "next/font/google";
+import { MyHerosSectionImageAbout } from "../assets/MyHeroSectionImageAbout";
 
 const AgeCalcul = () => {
     const today = new Date();
@@ -23,7 +24,7 @@ const AgeCalcul = () => {
 const Aboutme = () => {
     const age = AgeCalcul();
     return (<Grid>
-        <HeroSection titreh1="Qui suis-je ?"/>
+        <HeroSection titreh1="Qui suis-je ?" imgSrc={MyHerosSectionImageAbout} imgAlt="image qui suis-je"/>
         <SectionContent
             // eslint-disable-next-line react/no-unescaped-entities
             titreText={<>"Maurine DuBeuf {age} ans"</> }

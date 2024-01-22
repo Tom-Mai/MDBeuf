@@ -6,11 +6,15 @@ import { HeroSection } from "@/src/features/layout/HeroSection";
 
 import { Images } from "./assets/Images";
 import { SectionContent } from "@/src/features/layout/SectionContent";
+import { MyHerosSectionImage } from "./assets/MyHerosSectionImage";
 const HomePage = () => {
     return (
         <div>
-            < HeroSection titreh1="Trouvez la cause de votre mal-être pour atteindre le
-bien-être "/>
+            < HeroSection 
+            titreh1="Trouvez la cause de votre mal-être pour atteindre le bien-être "
+            imgAlt="og"
+            imgSrc={MyHerosSectionImage}           
+            />
             <SectionContent
                 titreText='Hello World'
                 bodyText={`La naturopathie est reconnue par l’Organisation Mondiale de la Santé comme "un ensemble de méthodes de soins visant à renforcer les défenses de l'organisme par des moyens naturels et biologiques". Elle a une approche holistique, c'est-à-dire qu'elle prend en compte l’être humain dans sa globalité et s’intéresse à tous les plans de l’individu : physiques, énergétiques et psycho-émotionnel.

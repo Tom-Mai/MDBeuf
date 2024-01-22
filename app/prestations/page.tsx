@@ -5,11 +5,12 @@ import Grid from "@mui/material/Grid";
 import { Images } from "@/app/assets/Images";
 import { HeroSection } from "@/src/features/layout/HeroSection";
 import { SectionContent } from "@/src/features/layout/SectionContent";
+import { heroSectionPrestation } from "../assets/herosectionPresation";
 
 export default function prestations() {
   return (
     <Grid>
-    <HeroSection titreh1="Mes prestations"/>
+    <HeroSection titreh1="Mes prestations" imgSrc={heroSectionPrestation} imgAlt="Image alt"/>
     <SectionContent
     titreText="Comment se passe une séance ?  "
     bodyText="La première séance commence par un échange. Nous définirons vos objectifs et établirons un bilan de vitalité et nutritionnel. Nous aborderons ensemble plusieurs points tels que vos antécédents médicaux et familiaux, votre environnement, vos habitudes de vie et alimentaires, votre niveau de stress... Cette étape du bilan est importante, elle permet de faire le point sur l'état actuel de votre forme physique, émotionnelle et mentale. Elle me permet également d'apprendre à vous connaître et d'identifier la cause du déséquilibre. Durant cette séance, vous pourrez vous exprimer librement, sans crainte de jugement. Je serai à votre écoute afin de répondre au mieux à vos attentes. J'ai à cœur d'établir une relation de confiance afin d'optimiser vos résultats.
