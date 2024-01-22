@@ -10,7 +10,7 @@ import { Birthstone } from "next/font/google";
 
 const AgeCalcul = () => {
     const today = new Date();
-    const BirthDate = new Date("1995-06-10");
+    const BirthDate = new Date("1995-06-09");
     
     let age = today.getFullYear() - BirthDate.getFullYear();
     let m = today.getMonth() - BirthDate.getMonth();
@@ -23,7 +23,7 @@ const AgeCalcul = () => {
 const Aboutme = () => {
     const age = AgeCalcul();
     return (<Grid>
-        <HeroSection/>
+        <HeroSection titreh1="Qui suis-je ?"/>
         <SectionContent
             // eslint-disable-next-line react/no-unescaped-entities
             titreText={<>"Maurine DuBeuf {age} ans"</> }

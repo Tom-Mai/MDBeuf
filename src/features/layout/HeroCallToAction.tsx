@@ -9,9 +9,12 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { ActionButton } from "@/src/theme/ActionButton";
+import { Titreh1 } from "./Titreh1";
 const colorBtn = "#ebba99";
-
-const HeroCallToAction = () => {
+interface H1Props {
+  titreh1 : React.ReactNode;
+}
+const HeroCallToAction = ({titreh1}:H1Props) => {
   return (
     <Box
       position='absolute'
@@ -35,19 +38,7 @@ const HeroCallToAction = () => {
       >
         <CardContent>
           <ThemeProvider theme={ActionButton}>
-            <Typography
-              sx={{
-               
-                textAlign: "center",
-                color: "white",
-                whiteSpace: "pre-line",
-                "@media (min-width:680px)": {},
-              }}
-              component='div'
-              variant='h1'
-            >
-              Trouvez la cause de votre mal-être pour atteindre le bien-être
-            </Typography>
+            <Titreh1 textContent={titreh1} />    
           </ThemeProvider>
         </CardContent>
         <CardActions>
