@@ -1,0 +1,1 @@
+export const MyHerosSectionImageAbout = "https://primary.jwwb.nl/unsplash/08bOYnH_r_E.jpg?enable-io=true&fit=bounds&width=1920&height=1920&quot";
