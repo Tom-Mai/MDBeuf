@@ -28,21 +28,14 @@ const Aboutme = () => {
         <SectionContent
             // eslint-disable-next-line react/no-unescaped-entities
             titreText={<>"Maurine DuBeuf {age} ans"</> }
-            bodyText={`D'un naturel chaleureux et bienveillant, j'attache beaucoup d'importance à mes relations avec les autres. Il était donc primordial pour moi de choisir un métier dans lequel je peux aider, accompagner et apporter un touche de bonheur aux gens. 
+            bodyText={`Maurine Dubeuf, 28 ans, je suis une fervente adepte du bien-être au naturel. Dotée d'un caractère chaleureux, ma vocation est d'accompagner et d'aider autrui. Ma passion pour la nutrition m'a menée à obtenir une licence en Sciences pour la santé, suivie d'un master en Nutrition Humaine à Nantes. Mon voyage académique m'a même conduit au Québec le temps de mon mémoire de recherche.
 
-            Passionnée depuis toujours par la nutrition et le bien-être au naturel, j'aurai un réel plaisir à vous découvrir et vous accompagnez dans le chemin du mieux-être.
-            
-             
-            
-            Mon parcours : 
-            
-            J'ai commencé par des études universitaires, avec une licences Sciences pour la santé spécialisé en nutrition. Puis un master nutrition humaine, pour lequel je suis partie quelques mois au Québec afin de réalisé mon mémoire de recherche ayant pour titre :  
-            
-            Je suis Heilpraktiker, nom donné aux naturopathes allemands. 
-            
-            "En Allemagne : le naturopathe, le magnétiseur, l’hygiéniste, l’acupuncteur, l’homéopathe, le phytothérapeute qui n’a pas le diplôme de Heilpraktiker n’a pas l’autorisation d’exercer. L’Allemagne est le seul pays qui a fait une loi d’autorisation d’exercice pour les thérapeutes non médecins".`}
+            Je suis également fière d'être "Heilpraktiker", un titre de naturopathe reconnu en Allemagne, où seuls les titulaires peuvent exercer certaines pratiques thérapeutiques. Formée à Ferney Voltaire, je suis prête à vous guider sur le chemin du bien-être.`}
             imgSrc={Images.Maurinedb[0]}
             />
+            <SectionContent bodyText={`Mes diplômes :
+- HEILPRAKTIKER CERS - TA FORMATION FERNEY VOLTAIRE
+- MASTER NUTRITION HUMAINE - UNIVERSITÉ NANTES`}/>
 
     </Grid>
     
