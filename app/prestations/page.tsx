@@ -41,7 +41,7 @@ export default function prestations() {
           ]}
           price={["160"]} />
         <PriceCard
-          logo={<><Trees size={50} color="#d48b0c" strokeWidth="1px" /></>}
+          logo={<><ShieldPlus size={50} color="#d48b0c" strokeWidth="1px" /></>}
           firstTitle="Accompagnement prenium"
           secondTitle="inclus"
           Paragraph={[
@@ -54,7 +54,8 @@ export default function prestations() {
 
         />
         <PriceCard
-          logo={<><ShieldPlus size={50} color="#d48b0c" strokeWidth="1px" /></>}
+          logo={<><Trees size={50} color="#d48b0c" strokeWidth="1px" /></>}
+          
           firstTitle="le détox protocol"
           secondTitle="objectifs"
           Paragraph={[
