@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { ActionButton } from "@/src/theme/ActionButton";
 import { Titreh1 } from "./Titreh1";
+import Link from "next/link";
 const colorBtn = "#ebba99";
 interface H1Props {
   titreh1 : React.ReactNode;
@@ -43,7 +44,8 @@ const HeroCallToAction = ({titreh1}:H1Props) => {
         </CardContent>
         <CardActions>
           <ThemeProvider theme={ActionButton}>
-            <Button
+           <Link href='/prestations'> 
+           <Button
               sx={{
                 maxWidth: "19em",
                 marginTop: "25px",
@@ -57,12 +59,11 @@ const HeroCallToAction = ({titreh1}:H1Props) => {
                 }
               }}
               variant='contained'
-              component='a'
-              href='tel:0659594229'
               size='large'
             >
-              Mon appel découverte
+              RÉSERVER UNE CONSULTATION
             </Button>
+            </Link>
           </ThemeProvider>
         </CardActions>
       </Card>

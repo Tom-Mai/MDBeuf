@@ -11,12 +11,13 @@ const HomePage = () => {
     return (
         <div>
             < HeroSection 
-            titreh1="Trouvez la cause de votre mal-être pour atteindre le bien-être "
+            titreh1= {<>Maurine Dubeuf <br/>Votre Naturopathe à Vénissieux </>}
+            
             imgAlt="og"
-            imgSrc={MyHerosSectionImage}           
+            imgSrc={Images.Banner[1]}           
             />
             <SectionContent
-                titreText='Hello World'
+                titreTexth2='Hello World'
                 bodyText={`La naturopathie est reconnue par l’Organisation Mondiale de la Santé comme "un ensemble de méthodes de soins visant à renforcer les défenses de l'organisme par des moyens naturels et biologiques". Elle a une approche holistique, c'est-à-dire qu'elle prend en compte l’être humain dans sa globalité et s’intéresse à tous les plans de l’individu : physiques, énergétiques et psycho-émotionnel.
 
             En outre, le naturopathe agit, non pas sur le symptôme, mais sur l’origine des maux. Il ne répond pas à une liste de symptômes ou de maladies mais il tente d'identifier les éléments de l'hygiène de vie de l'individu, étant à l'origine des maux. Afin de soulager la personne, un accompagnement individualisé 100% naturel est mit en place. Cette pratique vise à apporter une solution globale à l'individu et à stimuler leur force d'auto-guérison.  
@@ -34,7 +35,7 @@ const HomePage = () => {
                 imgSrc={Images.hyginealimentaire[0]}
             />
             <SectionContent
-                titreText=" Pourquoi consulter ?"
+                titreTexth2=" Pourquoi consulter ?"
                 bodyText={`Vous vous sentez fatigué ? Vous manquez d'énergie pour tenir votre journée ? Vous maigrissez ou prenez du poids sans comprendre la raison ? Vous souffrez d'acné ? Vous avez des problèmes digestif ? Vous sentez qu'il y a un problème alors que vos analyses sont bonnes ? Vous pensez que c'est dans votre tête et que cela va passer avec le temps ?
 
  
@@ -54,7 +55,7 @@ const HomePage = () => {
             ))}
             </Grid>
             <SectionContent
-                titreText="Quand consulter ?"
+                titreTexth2="Quand consulter ?"
                 bodyText={`Lorsqu'il y a un déséquilibre au niveau corporel, énergétique, spirituel ou émotionnel, nous entrons dans un des 4 niveaux de réactions corporelles suivant :`}
             />
             <SectionContent
