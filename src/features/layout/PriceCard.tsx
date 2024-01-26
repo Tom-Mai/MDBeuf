@@ -1,6 +1,9 @@
+import { ActionButton } from "@/src/theme/ActionButton";
 import { PriceCardTheme } from "@/src/theme/PriceCardTheme";
-import { Card, CardContent, CardMedia, Divider, Typography } from "@mui/material";
-
+import { Button, Card, CardActions, CardContent, CardMedia, Divider, ThemeProvider, Typography } from "@mui/material";
+import { Moon, ShoppingCart } from "lucide-react";
+import Link from "next/link";
+const colorBtn = "#5C7A7D";
 interface PriceCardProps {
     logo?: React.ReactNode;
     firstTitle?: React.ReactNode;
@@ -48,6 +51,41 @@ export const PriceCard = ({ firstTitle, secondTitle, Paragraph, price, logo }: P
                         {prices}€
                     </Typography>
                 ))}
+                <CardActions sx={{justifyContent:"center"}}>
+          <ThemeProvider theme={ActionButton}>
+           <Link href='#'> 
+           <Button
+              sx={{
+                width:'44px',
+                height: '44px',
+                "@media (min-width:768px)":{
+                    width:"19em",
+                    height:"auto",
+                },
+                maxWidth: "19em",
+                marginTop: "25px",
+                padding: "2em 2em",
+                backgroundColor: colorBtn,
+                '&:hover':{
+                    backgroundColor: '#c87c50',
+                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+                    transitionDelay:"0.3s ease",
+                    
+               
+                }
+              }}
+              variant='contained'
+              size='large'
+            >
+                <ShoppingCart  strokeWidth="1px"
+                className="rotate-0 scale-100 transition-all dark:-rotate-100 dark:scale-0" />
+                <Moon size={20}
+        className=' absolute rotate-90 scale-0 transition-all dark:-rotate-0 dark:scale-100'/>
+              {/* {`J'ai choisis`} */}
+            </Button>
+            </Link>
+          </ThemeProvider>
+        </CardActions>
 
 
 
