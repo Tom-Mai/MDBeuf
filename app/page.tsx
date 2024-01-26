@@ -17,7 +17,7 @@ const HomePage = () => {
             imgSrc={Images.Banner[1]}           
             />
             <SectionContent
-                titreTexth2='Hello World'
+                titreTexth2={`Qu'est-ce que la Naturopathie ?`}
                 bodyText={`La naturopathie est reconnue par l’Organisation Mondiale de la Santé comme "un ensemble de méthodes de soins visant à renforcer les défenses de l'organisme par des moyens naturels et biologiques". Elle a une approche holistique, c'est-à-dire qu'elle prend en compte l’être humain dans sa globalité et s’intéresse à tous les plans de l’individu : physiques, énergétiques et psycho-émotionnel.
 
             En outre, le naturopathe agit, non pas sur le symptôme, mais sur l’origine des maux. Il ne répond pas à une liste de symptômes ou de maladies mais il tente d'identifier les éléments de l'hygiène de vie de l'individu, étant à l'origine des maux. Afin de soulager la personne, un accompagnement individualisé 100% naturel est mit en place. Cette pratique vise à apporter une solution globale à l'individu et à stimuler leur force d'auto-guérison.  
