@@ -10,7 +10,7 @@ interface PricePaperProps {
 }
 export const PricePaper = ({ firstTitle, secondTitle, Paragraph, price, logo }: PricePaperProps) => {
     return (
-
+// TODO : faire en sorte que le bouton reserver ma cosuiltation ammene à cette page (prestations) mais au niveau des card et non au top
         <PriceCardTheme>
             {logo}
             <CardContent>
@@ -34,7 +34,7 @@ export const PricePaper = ({ firstTitle, secondTitle, Paragraph, price, logo }: 
                     </Typography>
                 ))}
                 <Divider variant="middle" />
-                {price && price.map((prices, index) =>(
+                {price && price.map((prices, index) => (
                     <Typography key={index} paragraph sx={{
                         fontFamily: 'Roboto',
                         fontWeight: "900",
@@ -45,9 +45,9 @@ export const PricePaper = ({ firstTitle, secondTitle, Paragraph, price, logo }: 
                         textTransform: "uppercase",
                         marginTop: "10%",
                     }}>
-                    {prices}€
-                </Typography>
-                    ))}
+                        {prices}€
+                    </Typography>
+                ))}
 
 
 
