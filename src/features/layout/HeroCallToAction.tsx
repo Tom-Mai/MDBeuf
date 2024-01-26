@@ -11,7 +11,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { ActionButton } from "@/src/theme/ActionButton";
 import { Titreh1 } from "./Titreh1";
 import Link from "next/link";
-const colorBtn = "#ebba99";
+const colorBtn = "#5C7A7D";
 interface H1Props {
   titreh1 : React.ReactNode;
 }
@@ -52,9 +52,9 @@ const HeroCallToAction = ({titreh1}:H1Props) => {
                 padding: "2em 2em",
                 backgroundColor: colorBtn,
                 '&:hover':{
-                    backgroundColor: '#e39d6e',
+                    backgroundColor: '#c87c50',
                     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
-                    transitionDelay:"0.1s",
+                    transitionDelay:"0.3s ease",
                
                 }
               }}

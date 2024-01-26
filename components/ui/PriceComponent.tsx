@@ -8,7 +8,7 @@ import * as React from 'react';
 // }
 // {textContent}:PriceComponentProps
 interface PriceComponentProps{
-    children: React.ReactNode,
+    children?: React.ReactNode,
 }
 export const PriceComponent = ({children}:PriceComponentProps) => {
     return (

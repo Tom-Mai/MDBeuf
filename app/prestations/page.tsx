@@ -7,9 +7,9 @@ import { HeroSection } from "@/src/features/layout/HeroSection";
 import { SectionContent } from "@/src/features/layout/SectionContent";
 import { heroSectionPrestation } from "../assets/herosectionPresation";
 import { PriceComponent } from "@/components/ui/PriceComponent";
-import { PricePaper } from "@/src/features/layout/PriceCard";
+import { PriceCard } from "@/src/features/layout/PriceCard";
 import { Titreh3 } from "@/src/features/layout/Titreh3";
-import { ShieldPlus, Shrub, Sprout, Trees } from "lucide-react";
+import { ShieldPlus, Sprout, Trees } from "lucide-react";
 
 
 
@@ -28,8 +28,8 @@ export default function prestations() {
     Le traitement par le Détox Protocol’ est un moyen efficace d’élimination des toxines. Il élimine notamment les toxines articulaires des rhumatismes, des crises de gouttes, et contribue également à l’élimination des métaux lourds, des toxines issues de la pollution atmosphérique et alimentaire."
       />
       <PriceComponent>
-        {/* <PricePaper firstTitle={}/> */}
-        <PricePaper
+
+        <PriceCard
           logo={<><Sprout size={50} color="#d48b0c" strokeWidth="1px" /></>}
           firstTitle="Accompagnement de base"
           secondTitle="inclus"
@@ -40,7 +40,7 @@ export default function prestations() {
             "Disponibilité sur WhatsApp pour répondre aux questions.",
           ]}
           price={["160"]} />
-        <PricePaper
+        <PriceCard
           logo={<><Trees size={50} color="#d48b0c" strokeWidth="1px" /></>}
           firstTitle="Accompagnement prenium"
           secondTitle="inclus"
@@ -53,7 +53,7 @@ export default function prestations() {
           price={["250"]} 
 
         />
-        <PricePaper
+        <PriceCard
           logo={<><ShieldPlus size={50} color="#d48b0c" strokeWidth="1px" /></>}
           firstTitle="le détox protocol"
           secondTitle="objectifs"

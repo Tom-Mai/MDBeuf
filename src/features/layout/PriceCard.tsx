@@ -1,14 +1,14 @@
 import { PriceCardTheme } from "@/src/theme/PriceCardTheme";
 import { Card, CardContent, CardMedia, Divider, Typography } from "@mui/material";
 
-interface PricePaperProps {
+interface PriceCardProps {
     logo?: React.ReactNode;
     firstTitle?: React.ReactNode;
     secondTitle?: React.ReactNode;
     Paragraph?: React.ReactNode[];
     price?: React.ReactNode[];
 }
-export const PricePaper = ({ firstTitle, secondTitle, Paragraph, price, logo }: PricePaperProps) => {
+export const PriceCard = ({ firstTitle, secondTitle, Paragraph, price, logo }: PriceCardProps) => {
     return (
 // TODO : faire en sorte que le bouton reserver ma cosuiltation ammene à cette page (prestations) mais au niveau des card et non au top
         <PriceCardTheme>
