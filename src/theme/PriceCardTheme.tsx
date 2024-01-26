@@ -2,7 +2,7 @@
 'use client'
 import { styled } from '@mui/material/styles';
 import { Card, Paper } from "@mui/material";
-export const PricePaperTheme = styled(Card)(({ theme })=> ({
+export const PriceCardTheme = styled(Card)(({ theme })=> ({
     width:300,
     height:600,
     padding: theme.spacing(2),
