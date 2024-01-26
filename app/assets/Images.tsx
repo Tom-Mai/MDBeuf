@@ -11,7 +11,10 @@ import repres8 from './repres8.webp';
 import repres9 from './repres9.webp';
 import repres10 from './repres10.webp';
 import MaurineDubeuf from "./MaurineDubeuf.jpg";
-
+import BannerAboutme from "./BannerAboutme.webp";
+import BannerHomePage from "./BannerHomePage.webp";
+import BannerPrestations from "./BannerPrestations.webp";
+import BannerContact from "./BannerContact.webp";
 export const Images = {
     Maurinedb :[
         {
@@ -24,6 +27,23 @@ export const Images = {
         src:    hyginealimentaire,
         alt: 'Représentation Hygiene alimentaire',
     },
+],
+Banner:[
+    {
+        src:BannerAboutme,
+        alt:'bathed in warm, natural light, emphasizing tranquility and wellness.',
+    },
+    {
+        src:BannerHomePage,
+        alt:' tranquil and inviting, with lighter tones and reduced shadows to create a warm and welcoming atmosphere.'
+    },{
+        src:BannerPrestations,
+        alt:"essence of tranquility, health, and naturopathy."
+    },
+    {
+        src:BannerContact,
+        alt: 'Contact naturopathe'
+    }
 ],
 lvlreactcorp:[
     {
