@@ -1,18 +1,24 @@
 'use client'
 
-import { PricePaper } from '@/src/features/layout/PricePaper';
+
 import { Grid, Paper, Stack, Typography } from '@mui/material';
 import * as React from 'react';
+// interface PriceComponentProps{
+//     textContent?: string;
+// }
+// {textContent}:PriceComponentProps
 interface PriceComponentProps{
-    textContent?: string;
+    children: React.ReactNode,
 }
-export const PriceComponent = ({textContent}:PriceComponentProps) => {
+export const PriceComponent = ({children}:PriceComponentProps) => {
     return (
-        <Grid item xs={2} display='flex' justifyContent="center"
+        <Stack  direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center" alignItems="center"
+        
             sx={{
                 width: '100%',
+                marginY:"20px",
             }}>
-            <PricePaper firstTitle={textContent} />
-        </Grid>
+           {children}
+        </Stack>
     )
 }

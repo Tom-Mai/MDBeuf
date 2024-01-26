@@ -8,6 +8,7 @@ import { SectionContent } from "@/src/features/layout/SectionContent";
 import { heroSectionPrestation } from "../assets/herosectionPresation";
 import { PriceComponent } from "@/components/ui/PriceComponent";
 import { PricePaper } from "@/src/features/layout/PricePaper";
+import { Titreh3 } from "@/src/features/layout/Titreh3";
 
 
 
@@ -25,7 +26,12 @@ export default function prestations() {
 
     Le traitement par le Détox Protocol’ est un moyen efficace d’élimination des toxines. Il élimine notamment les toxines articulaires des rhumatismes, des crises de gouttes, et contribue également à l’élimination des métaux lourds, des toxines issues de la pollution atmosphérique et alimentaire."
     />
-    <PriceComponent textContent="test111"/>
+    <PriceComponent>
+      {/* <PricePaper firstTitle={}/> */}
+      <PricePaper firstTitle="First Title" secondTitle="Second Title" ParagraphTitle="Paragraph" price="PRICE"/>
+      <PricePaper firstTitle="Test"/>
+ 
+    </PriceComponent>
   
     </Grid>
   )
