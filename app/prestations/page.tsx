@@ -40,6 +40,22 @@ export default function prestations() {
             "Disponibilité sur WhatsApp pour répondre aux questions.",
           ]}
           price={["160"]} />
+          <PriceCard
+            logo={<><Trees size={50} color="#d48b0c" strokeWidth="1px" /></>}
+            
+            firstTitle="le détox protocol"
+            secondTitle="objectifs"
+            Paragraph={[
+              "Détoxification du foie et drainage des organes émonctoires",
+              "Elimination des toxines et des déchets du corps",
+              "Augmentation de la vitalité et de l’énergie",
+            ]}
+            price={[
+              "1 séance = 40",
+              "2 séances = 70",
+              "3 séances = 95",
+          ]}
+          />
         <PriceCard
           logo={<><ShieldPlus size={50} color="#d48b0c" strokeWidth="1px" /></>}
           firstTitle="Accompagnement prenium"
@@ -52,22 +68,6 @@ export default function prestations() {
           ]}
           price={["250"]} 
 
-        />
-        <PriceCard
-          logo={<><Trees size={50} color="#d48b0c" strokeWidth="1px" /></>}
-          
-          firstTitle="le détox protocol"
-          secondTitle="objectifs"
-          Paragraph={[
-            "Détoxification du foie et drainage des organes émonctoires",
-            "Elimination des toxines et des déchets du corps",
-            "Augmentation de la vitalité et de l’énergie",
-          ]}
-          price={[
-            "1 séance = 40",
-            "2 séances = 70",
-            "3 séances = 95",
-        ]}
         />
 
       </PriceComponent>
