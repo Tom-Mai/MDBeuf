@@ -1,7 +1,7 @@
 import { ActionButton } from "@/src/theme/ActionButton";
 import { PriceCardTheme } from "@/src/theme/PriceCardTheme";
 import { Button, Card, CardActions, CardContent, CardMedia, Divider, ThemeProvider, Typography } from "@mui/material";
-import { Moon, ShoppingCart } from "lucide-react";
+import { Check, Moon, ShoppingCart } from "lucide-react";
 import Link from "next/link";
 const colorBtn = "#5C7A7D";
 interface PriceCardProps {
@@ -13,7 +13,7 @@ interface PriceCardProps {
 }
 export const PriceCard = ({ firstTitle, secondTitle, Paragraph, price, logo }: PriceCardProps) => {
     return (
-// TODO : faire en sorte que le bouton reserver ma cosuiltation ammene à cette page (prestations) mais au niveau des card et non au top
+        // TODO : faire en sorte que le bouton reserver ma cosuiltation ammene à cette page (prestations) mais au niveau des card et non au top
         <PriceCardTheme>
             {logo}
             <CardContent>
@@ -51,41 +51,60 @@ export const PriceCard = ({ firstTitle, secondTitle, Paragraph, price, logo }: P
                         {prices}€
                     </Typography>
                 ))}
-                <CardActions sx={{justifyContent:"center"}}>
-          <ThemeProvider theme={ActionButton}>
-           <Link href='#'> 
-           <Button
-              sx={{
-                width:'44px',
-                height: '44px',
-                "@media (min-width:768px)":{
-                    width:"19em",
-                    height:"auto",
-                },
-                maxWidth: "19em",
-                marginTop: "25px",
-                padding: "2em 2em",
-                backgroundColor: colorBtn,
-                '&:hover':{
-                    backgroundColor: '#c87c50',
-                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
-                    transitionDelay:"0.3s ease",
-                    
-               
-                }
-              }}
-              variant='contained'
-              size='large'
-            >
-                <ShoppingCart  strokeWidth="1px"
-                className="rotate-0 scale-100 transition-all dark:-rotate-100 dark:scale-0" />
-                <Moon size={20}
-        className=' absolute rotate-90 scale-0 transition-all dark:-rotate-0 dark:scale-100'/>
-              {/* {`J'ai choisis`} */}
-            </Button>
-            </Link>
-          </ThemeProvider>
-        </CardActions>
+                <CardActions sx={{ justifyContent: "center" }}>
+                    <ThemeProvider theme={ActionButton}>
+                        <Link href='#'>
+                            <Button
+                                sx={{
+                                    width: '44px',
+                                    height: '44px',
+                                    "@media (min-width:768px)": {
+                                        width: "19em",
+                                        height: "auto",
+                                    },
+                                    maxWidth: "19em",
+                                    marginTop: "25px",
+                                    padding: "2em 2em",
+                                    backgroundColor: colorBtn,
+                                    '&:hover': {
+                                        backgroundColor: '#c87c50',
+                                        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+                                        transitionDelay: "0.3s ease",
+                                    },
+                                    position: 'relative',
+                                    '& svg': {
+                                        transition: 'opacity 0.3s ease-in-out 0.3s',
+                                    },
+                                    '& svg:nth-of-type(1)': {
+                                        opacity: 1,
+                                    },
+                                    '& svg:nth-of-type(2)': {
+                                        opacity: 0,
+                                        position: 'absolute',
+                                        
+                                    },
+                                    '&:hover svg:nth-of-type(1)': {
+                                        opacity: 0,
+                                        transform:'rotate(0.9turn)'
+                                        
+                                    },
+                                    '&:hover svg:nth-of-type(2)': {
+                                        opacity: 1,
+                                        transform:'rotate(0turn)'
+                                    }
+                                }}
+                                variant='contained'
+                                size='large'
+                            >
+                                <ShoppingCart strokeWidth="1px"/>
+            <Check strokeWidth="1px"/>
+
+
+                                {/* {`J'ai choisis`} */}
+                            </Button>
+                        </Link>
+                    </ThemeProvider>
+                </CardActions>
 
 
 

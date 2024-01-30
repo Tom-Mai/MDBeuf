@@ -20,7 +20,6 @@ export const ActionButton =  createTheme({
   ActionButton.typography.h1 = {
     fontSize: "3rem",
     fontWeight: "400",
-    fontFamily: "Dosis",
     textAlign: "center",
     "@media (min-width:600px)": {
       fontSize: "5rem",
