@@ -4,6 +4,7 @@ import {clsx} from 'clsx';
 import './globals.css'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import ResponsiveAppBar from '@/src/features/layout/ResponsiveAppbar';
+import ScrollTopTop from '@/src/features/layout/ScrollToTop';
 export const oswald = Oswald({
   subsets: ['latin'],
   display: 'swap',
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={clsx(roboto.className, "App")}>
         <ResponsiveAppBar routes={routes} />
+        <ScrollTopTop/>
       <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
       </body>
     </html>
