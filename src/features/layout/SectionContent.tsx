@@ -33,7 +33,7 @@ interface SectionContentProps {
 }
 export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, imgToLeft }: SectionContentProps) => {
 
-    const highlightWords = ["naturopathie", "Organisation Mondiale de la Santé", "méthode de soin", "moyen naturel et biologique", "approche holistique", "individu", "naturopathe", "symptôme", "hygiène de vie", "accompagnement individualisé", "auto-guérison", "médecine traditionnelle chinoise", "ayurvédique", "diagnostic", "bien-être", "hygiène alimentaire", "musculaire", "neuropsychique", "hydrologie", "phytologie", "aromatologie", "réflexologie plantaire", "exercice respiratoire", "massage", "magnétisme", "fatigue", "énergie", "problème digestif", "dysfonctionnement", "pluridisciplinaire", "déséquilibre", "réaction corporelle", "suivi médical", "prévention", "maladie"];
+    const highlightWords = ["naturopathie", "bien-être", "hygiène de vie", "méthodes de soins", "approche holistique", "auto-guérison", "naturopathe", "médecine traditionnelle", "phytologie", "réflexologie plantaire"];
 
     const formattedBodyText = typeof bodyText === 'string' ? highlightText(bodyText, highlightWords) : bodyText;
     const textComponent = (
