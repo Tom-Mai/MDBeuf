@@ -13,8 +13,10 @@ export const Titreh3 = ({textContent}: Titreh3Props) => {
         sx={{
             fontFamily: 'Oswald',
             fontWeight:"700",
-            color: "#323334",
-            textAlign: "left", 
+            color: "#b89b3e",
+            // color: "#323334",
+            // textAlign: "left", 
+            lineHeight:"1.1",
             fontSize:"3rem",
             wordWrap: "break-word",
             cursor:"auto",
