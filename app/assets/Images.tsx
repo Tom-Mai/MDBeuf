@@ -15,6 +15,8 @@ import BannerAboutme from "./BannerAboutme.webp";
 import BannerHomePage from "./BannerHomePage.webp";
 import BannerPrestations from "./BannerPrestations.webp";
 import BannerContact from "./BannerContact.webp";
+import image171 from "./Image171.png";
+import photoOfNature from "./photoOfNature.webp";
 export const Images = {
     Maurinedb :[
         {
@@ -26,6 +28,10 @@ export const Images = {
       {
         src:    hyginealimentaire,
         alt: 'Représentation Hygiene alimentaire',
+    },
+    {
+        src:photoOfNature,
+        alt:"test",
     },
 ],
 Banner:[
