@@ -18,21 +18,15 @@ const HomePage = () => {
             />
             <SectionContent
                 titreTexth2={`Qu'est-ce que la Naturopathie ?`}
-                bodyText={`La naturopathie est reconnue par l’Organisation Mondiale de la Santé comme "un ensemble de méthodes de soins visant à renforcer les défenses de l'organisme par des moyens naturels et biologiques". Elle a une approche holistique, c'est-à-dire qu'elle prend en compte l’être humain dans sa globalité et s’intéresse à tous les plans de l’individu : physiques, énergétiques et psycho-émotionnel.
+                bodyText={`La naturopathie est bien plus qu’une approche médicale : c’est une philosophie, un art de vivre. Voici un aperçu de cette pratique ancestrale.
 
-            En outre, le naturopathe agit, non pas sur le symptôme, mais sur l’origine des maux. Il ne répond pas à une liste de symptômes ou de maladies mais il tente d'identifier les éléments de l'hygiène de vie de l'individu, étant à l'origine des maux. Afin de soulager la personne, un accompagnement individualisé 100% naturel est mit en place. Cette pratique vise à apporter une solution globale à l'individu et à stimuler leur force d'auto-guérison.  
-            
-            La naturopathie est souvent comparée à la médecine traditionnelle chinoise et ayurvédique, puisqu'elle est reconnu comme la 3ème médecine traditionnelle. `}
+                En tant que naturopathe à Vénissieux, je m’appuie sur trois principes clés  `}
 
             />
             <SectionContent
-                bodyText={`Le naturopathe ne pose aucun diagnostic ! Son rôle est de préserver et de maintenir un état de bien être par  l’enseignement préventif de la santé via trois piliers fondamentaux :  l’hygiène alimentaire, musculaire et neuropsychique. 
-
-            N.B : Imaginons une chaise à 3 pieds : pour réussir à s’asseoir, les pieds doivent être à la même hauteur et équilibré. Si un des pieds de la chaise est plus petit ou inexistant alors la chaise ne peut pas assurer sa fonction. Cela fonctionne pareil pour les 3 piliers de la santé.
-            
-            Il adapte ses conseils d'hygiène de vie et utilise des techniques telles que l'hydrologie, la phytologie, l'aromatologie, la réflexologie plantaire, les exercices respiratoires, les massages, le magnétisme... en fonction du terrain de l'individu.
-            `}
-                imgSrc={Images.hyginealimentaire[0]}
+                titreTexth3={`L'auto-guérison`}
+                bodyText={`Le corps a une capacité innée à se guérir. La naturopathie vise à soutenir ce processus.`}
+                imgSrc={Images.hyginealimentaire[1]}
             />
             <SectionContent
                 titreTexth2=" Pourquoi consulter ?"
