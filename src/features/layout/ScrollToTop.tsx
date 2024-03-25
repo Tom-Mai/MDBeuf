@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import {IconButton } from "@mui/material";
-
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 export default function ScrollTopTop() {
     const [showButton, setShowButton] = useState(false);
 
@@ -31,7 +31,7 @@ export default function ScrollTopTop() {
                 right: "10px"
             }}
         >
-            Up
+            <ArrowCircleUpIcon fontSize="large"/>
             </IconButton> 
         
     );
