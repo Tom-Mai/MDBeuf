@@ -30,21 +30,22 @@ interface SectionContentProps {
     titreTexth2?: React.ReactNode;
     titreTexth3?: React.ReactNode;
     imgToLeft?: boolean;
+    xAxes?: boolean;
 }
-export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, imgToLeft }: SectionContentProps) => {
+export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, imgToLeft,xAxes }: SectionContentProps) => {
 
     const highlightWords = ["naturopathie", "bien-être", "hygiène de vie", "méthodes de soins", "approche holistique", "auto-guérison", "naturopathe", "médecine traditionnelle", "phytologie", "réflexologie plantaire"];
 
     const formattedBodyText = typeof bodyText === 'string' ? highlightText(bodyText, highlightWords) : bodyText;
     const textComponent = (
-        <Grid item xs={12} lg={imgSrc ? 6 : 12}>
+        <Grid item xs={12} lg={xAxes ? 6 : 12}>
             {formattedBodyText &&
                 <Typography variant='body1' sx={{
                     marginTop: '20px',
                     lineHeight: "1.35",
                     fontSize: "16px",
                     color: '#707070',
-                    textAlign: "justify",
+                    textAlign: "center",
                 }}>
                     {formattedBodyText}
                 </Typography>}
@@ -54,7 +55,6 @@ export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, img
     const imgComponent = imgSrc &&
         <Grid item sx={{
             maxWidth: '400px',
-            
             margin: 'auto',
             "@media (max-width:1200px)": {
                 width: "100%",
