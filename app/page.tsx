@@ -10,11 +10,11 @@ import { MyHerosSectionImage } from "./assets/MyHerosSectionImage";
 const HomePage = () => {
     return (
         <div>
-            < HeroSection 
-            titreh1= {<>Maurine Dubeuf <br/>Votre Naturopathe à Vénissieux </>}
-            
-            imgAlt="og"
-            imgSrc={Images.Banner[1]}           
+            < HeroSection
+                titreh1={<>Maurine Dubeuf <br />Votre Naturopathe à Vénissieux </>}
+
+                imgAlt="og"
+                imgSrc={Images.Banner[1]}
             />
             <SectionContent
                 titreTexth2={`Qu'est-ce que la Naturopathie ?`}
@@ -29,25 +29,41 @@ const HomePage = () => {
                 imgSrc={Images.hyginealimentaire[1]}
             />
             <SectionContent
-                titreTexth2=" Pourquoi consulter ?"
-                bodyText={`Vous vous sentez fatigué ? Vous manquez d'énergie pour tenir votre journée ? Vous maigrissez ou prenez du poids sans comprendre la raison ? Vous souffrez d'acné ? Vous avez des problèmes digestif ? Vous sentez qu'il y a un problème alors que vos analyses sont bonnes ? Vous pensez que c'est dans votre tête et que cela va passer avec le temps ?
-
- 
-
-            Et bien non ! Tout ce qui vous arrive a une explication. Votre corps vous parle et vous prévient d'un dysfonctionnement. Il est donc important d'agir dès l'apparition des premiers symptômes.`}
+                titreTexth3={`La prévention`}
+                bodyText={`Mieux vaut prévenir que guérir. Adopter de bonnes habitudes est le premier pas vers une bonne santé.`}
+                imgSrc={Images.hyginealimentaire[2]}
             />
             <SectionContent
-                bodyText={`Grâce à son approche globale et pluridisciplinaire, le naturopathe propose un accompagnement adapté à chaque personne pour tous types de problèmes : `}
+                titreTexth3={`Le traitement de la cause`}
+                bodyText={`Au lieu de simplement traiter les symptômes, la naturopathie cherche à comprendre et traiter la cause profonde des déséquilibres.`}
+                imgSrc={Images.hyginealimentaire[3]}
             />
-            <Grid container sx={{justifyContent:"center"}}>
-            {Images.repres.map((image) => (
-                <Grid item key={image.alt}>
-                <SectionContent
-                    imgSrc={image}
-                />
-                </Grid>
-            ))}
-            </Grid>
+            <SectionContent
+                titreTexth2="Pourquoi choisir un Naturopathe?"
+                bodyText={`Consulter un naturopathe, c’est choisir une approche globale de sa santé. Voici quelques raisons pour lesquelles cette démarche peut vous être bénéfique`}
+            />
+            <SectionContent
+                titreTexth3={`Approche personnalisée`}
+                bodyText={`Chaque individu est unique. En tant que naturopathe à Vénissieux, je crée des plans adaptés à chaque personne, en tenant compte de son vécu, ses besoins et ses objectifs.`}
+            />
+            <SectionContent
+                titreTexth3={`Prévention`}
+                bodyText={`La naturopathie mise sur la prévention, en aidant à instaurer un équilibre de vie qui minimise les risques de maladies et déséquilibres.`}
+            />
+            <SectionContent
+                titreTexth3={`Regard holistique`}
+                bodyText={`La naturopathie ne se contente pas de voir les symptômes, mais la personne dans sa globalité : physique, émotionnelle et mentale.`}
+            />
+            {/* TO DO :: Changer al disposition des Sections ci dessus.  */}
+            {/* <Grid container sx={{ justifyContent: "center" }}>
+                {Images.repres.map((image) => (
+                    <Grid item key={image.alt}>
+                        <SectionContent
+                            imgSrc={image}
+                        />
+                    </Grid> 
+                ))}
+            </Grid> */}
             <SectionContent
                 titreTexth2="Quand consulter ?"
                 bodyText={`Lorsqu'il y a un déséquilibre au niveau corporel, énergétique, spirituel ou émotionnel, nous entrons dans un des 4 niveaux de réactions corporelles suivant :`}
@@ -61,10 +77,10 @@ const HomePage = () => {
                 Dans tous les cas, un suivi médical est recommandé. `}
             />
             <SectionContent
-            bodyText={ 
-                `En France,nous avons tendance à attendre d’être malade (et d'atteindre le stade 4) avant de consulter. Alors que nous pouvons agir bien avant le stade de la maladie afin d'éviter certaines souffrances.`
-                
-            }
+                bodyText={
+                    `En France,nous avons tendance à attendre d’être malade (et d'atteindre le stade 4) avant de consulter. Alors que nous pouvons agir bien avant le stade de la maladie afin d'éviter certaines souffrances.`
+
+                }
             />
 
         </div>
