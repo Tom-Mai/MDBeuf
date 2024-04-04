@@ -15,8 +15,10 @@ import BannerAboutme from "./BannerAboutme.webp";
 import BannerHomePage from "./BannerHomePage.webp";
 import BannerPrestations from "./BannerPrestations.webp";
 import BannerContact from "./BannerContact.webp";
-import image171 from "./Image171.png";
 import photoOfNature from "./photoOfNature.webp";
+import handsphoto1 from "./handsphoto1.webp";
+import photohandfruits from "./photohandfruits.webp";
+
 export const Images = {
     Maurinedb :[
         {
@@ -32,6 +34,14 @@ export const Images = {
     {
         src:photoOfNature,
         alt:"test",
+    },
+    {
+        src:handsphoto1,
+        alt:"hand photo of nature"
+    },
+    {
+        src:photohandfruits,
+        alt:"hand photo of nature"
     },
 ],
 Banner:[
