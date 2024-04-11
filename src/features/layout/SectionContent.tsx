@@ -31,8 +31,9 @@ interface SectionContentProps {
     titreTexth3?: React.ReactNode;
     imgToLeft?: boolean;
     xAxes?: boolean;
+    H3Color? : boolean;
 }
-export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, imgToLeft,xAxes }: SectionContentProps) => {
+export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, imgToLeft,xAxes, H3Color }: SectionContentProps) => {
 
     const highlightWords = ["naturopathie", "bien-être", "hygiène de vie", "méthodes de soins", "approche holistique", "auto-guérison", "naturopathe", "médecine traditionnelle", "phytologie", "réflexologie plantaire"];
 
@@ -82,7 +83,7 @@ export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, img
             }}
         >
             {titreTexth2 && <Titreh2 textContent={titreTexth2} />}
-            {titreTexth3 && <Titreh3 textContent={titreTexth3} />}
+            {titreTexth3 && <Titreh3 textContent={titreTexth3} h3Black={H3Color} />}
             <Grid container spacing={2} sx={{ justifyContent: 'space-evenly' }}>
                 {imgToLeft ? imgComponent : textComponent}
                 {imgToLeft ? textComponent : imgComponent}
