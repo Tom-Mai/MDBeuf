@@ -32,8 +32,9 @@ interface SectionContentProps {
     imgToLeft?: boolean;
     xAxes?: boolean;
     H3Color? : boolean;
+    H3Position? : boolean;
 }
-export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, imgToLeft,xAxes, H3Color }: SectionContentProps) => {
+export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, imgToLeft,xAxes, H3Color, H3Position }: SectionContentProps) => {
 
     const highlightWords = ["naturopathie", "bien-être", "hygiène de vie", "méthodes de soins", "approche holistique", "auto-guérison", "naturopathe", "médecine traditionnelle", "phytologie", "réflexologie plantaire"];
 
@@ -66,7 +67,7 @@ export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, img
                 maxWidth: '100%',  // Pour la réactivité
                 height: 'auto', //maintient le ratio
                 borderRadius: '50%',
-                // borderRadius:"50%", impact toutes les imlages, et ne veux que celle de about me
+                // borderRadius:"50%", impact toutes les images, et ne veux que celle de about me
                 boxShadow: '0px 4px 5px -2px rgba(0,0,0,0.2), 0px 7px 10px 1px rgba(0,0,0,0.14), 0px 2px 16px 1px rgba(0,0,0,0.12)'
             }} />
 
@@ -83,7 +84,7 @@ export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, img
             }}
         >
             {titreTexth2 && <Titreh2 textContent={titreTexth2} />}
-            {titreTexth3 && <Titreh3 textContent={titreTexth3} h3Black={H3Color} />}
+            {titreTexth3 && <Titreh3 textContent={titreTexth3} h3Black={H3Color} H3PosLeft={H3Position} />}
             <Grid container spacing={2} sx={{ justifyContent: 'space-evenly' }}>
                 {imgToLeft ? imgComponent : textComponent}
                 {imgToLeft ? textComponent : imgComponent}

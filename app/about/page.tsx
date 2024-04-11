@@ -33,7 +33,7 @@ const Aboutme = () => {
             Je suis également fière d'être "Heilpraktiker", un titre de naturopathe reconnu en Allemagne, où seuls les titulaires peuvent exercer certaines pratiques thérapeutiques. Formée à Ferney Voltaire, je suis prête à vous guider sur le chemin du bien-être.`}
             imgSrc={Images.Maurinedb[0]}
             />
-            <SectionContent titreTexth3={`Mes diplômes :`} H3Color bodyText={`- HEILPRAKTIKER CERS - TA FORMATION FERNEY VOLTAIRE
+            <SectionContent titreTexth3={`Mes diplômes :`} H3Color H3Position bodyText={`- HEILPRAKTIKER CERS - TA FORMATION FERNEY VOLTAIRE
             - MASTER NUTRITION HUMAINE - UNIVERSITÉ NANTES`}/>
 
     </Grid>

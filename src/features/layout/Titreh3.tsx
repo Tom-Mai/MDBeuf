@@ -4,9 +4,10 @@ import Typography from '@mui/material/Typography';
 interface Titreh3Props {
     textContent: React.ReactNode;
     h3Black?: React.ReactNode;
+    H3PosLeft?: React.ReactNode;
 }
 
-export const Titreh3 = ({textContent,h3Black}: Titreh3Props) => {
+export const Titreh3 = ({textContent,h3Black,H3PosLeft}: Titreh3Props) => {
 
     return(
 
@@ -15,8 +16,8 @@ export const Titreh3 = ({textContent,h3Black}: Titreh3Props) => {
             fontFamily: 'Oswald',
             fontWeight:"700",
             color: h3Black ?"#323334":"#b89b3e",
-            // color: "#323334",
-            // textAlign: "left", 
+           
+            textAlign: H3PosLeft ? "left" : "center", 
             lineHeight:"1.1",
             fontSize:"3rem",
             wordWrap: "break-word",
