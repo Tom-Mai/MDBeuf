@@ -7,23 +7,23 @@ interface Titreh3Props {
     H3PosLeft?: React.ReactNode;
 }
 
-export const Titreh3 = ({textContent,h3Black,H3PosLeft}: Titreh3Props) => {
+export const Titreh3 = ({ textContent, h3Black, H3PosLeft }: Titreh3Props) => {
 
-    return(
+    return (
 
-        <Typography variant='h3' component="h3" 
-        sx={{
-            fontFamily: 'Oswald',
-            fontWeight:"700",
-            color: h3Black ?"#323334":"#b89b3e",
-           
-            textAlign: H3PosLeft ? "left" : "center", 
-            lineHeight:"1.1",
-            fontSize:"3rem",
-            wordWrap: "break-word",
-            cursor:"auto",
-        }}>
-            {textContent} 
+        <Typography variant='h3' component="h3"
+            sx={{
+                fontFamily: 'Oswald',
+                fontWeight: "300",
+                color: h3Black ? "#323334" : "#b89b3e",
+                paddingY: "10px",
+                textAlign: H3PosLeft ? "left" : "center",
+                lineHeight: "1.1",
+                fontSize: "3.5rem",
+                wordWrap: "break-word",
+                cursor: "auto",
+            }}>
+            {textContent}
         </Typography>
 
     )
