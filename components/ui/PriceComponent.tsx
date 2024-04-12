@@ -1,6 +1,4 @@
 'use client'
-
-
 import { Grid, Paper, Stack, Typography } from '@mui/material';
 import * as React from 'react';
 // interface PriceComponentProps{
