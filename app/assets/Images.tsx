@@ -10,7 +10,7 @@ import repres7 from './repres7.webp';
 import repres8 from './repres8.webp';
 import repres9 from './repres9.webp';
 import repres10 from './repres10.webp';
-import MaurineDubeuf from "./MaurineDubeuf.jpg";
+import MaurineDuBeuf from "./MaurineDuBeuf.webp";
 import BannerAboutme from "./BannerAboutme.webp";
 import BannerHomePage from "./BannerHomePage.webp";
 import BannerPrestations from "./BannerPrestations.webp";
@@ -22,7 +22,7 @@ import photohandfruits from "./photohandfruits.webp";
 export const Images = {
     Maurinedb :[
         {
-            src: MaurineDubeuf,
+            src: MaurineDuBeuf,
             alt: 'Photo portrait de Maurine Dubeuf, Naturopathe'
         }
     ],

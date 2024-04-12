@@ -25,7 +25,7 @@ const Aboutme = () => {
     const age = AgeCalcul();
     return (<Grid>
         <HeroSection titreh1="Qui suis-je ?" imgSrc={Images.Banner[0]} imgAlt="image qui suis-je"/>
-        <SectionContent xAxes
+        <SectionContent xAxes ImageRounded
             // eslint-disable-next-line react/no-unescaped-entities
             titreTexth2={<>Maurine DuBeuf {age} ans</> }
             bodyText={`Je suis une fervente adepte du bien-être au naturel. Dotée d'un caractère chaleureux, ma vocation est d'accompagner et d'aider autrui. Ma passion pour la nutrition m'a menée à obtenir une licence en Sciences pour la santé, suivie d'un master en Nutrition Humaine à Nantes. Mon voyage académique m'a même conduit au Québec le temps de mon mémoire de recherche.
