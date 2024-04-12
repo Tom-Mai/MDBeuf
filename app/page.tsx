@@ -7,12 +7,13 @@ import { SectionContent } from "@/src/features/layout/SectionContent";
 import { MyHerosSectionImage } from "./assets/MyHerosSectionImage";
 import { PriceComponent } from "@/components/ui/PriceComponent";
 import { PriceCard } from "@/src/features/layout/PriceCard";
+import { Divider } from "@mui/material";
 const HomePage = () => {
     return (
         <Grid>
             < HeroSection
                 titreh1={<>Maurine Dubeuf <br />Votre Naturopathe à Vénissieux </>}
-                imgAlt="og"
+                imgAlt="#"
                 imgSrc={Images.Banner[1]}
             />
             <SectionContent
@@ -35,6 +36,7 @@ const HomePage = () => {
                 bodyText={`Au lieu de simplement traiter les symptômes, la naturopathie cherche à comprendre et traiter la cause profonde des déséquilibres.`}
                 imgSrc={Images.hyginealimentaire[3]}
             />
+            <Divider variant="middle"/>
             {/* Debut zone TEST changement de mise à page  */}
             {/* <PriceComponent>
                 <PriceCard
@@ -57,20 +59,17 @@ const HomePage = () => {
             {/* Fin Zone test */}
             <SectionContent
                 titreTexth2={`Pourquoi choisir un Naturopathe?`} H2Color
+                bodyText={`Consulter un naturopathe, c’est choisir une approche globale de sa santé. Voici quelques raisons pour lesquelles cette démarche peut vous être bénéfique`}
             />
-            <SectionContent
+            <SectionContent TextPositionCenter
                 titreTexth3={`Approche personnalisée`}
                 bodyText={`Chaque individu est unique. En tant que naturopathe à Vénissieux, je crée des plans adaptés à chaque personne, en tenant compte de son vécu, ses besoins et ses objectifs.`}
             />
-            <SectionContent
-                titreTexth3={`Approche personnalisée`}
-                bodyText={`Chaque individu est unique. En tant que naturopathe à Vénissieux, je crée des plans adaptés à chaque personne, en tenant compte de son vécu, ses besoins et ses objectifs.`}
-            />
-            <SectionContent
+            <SectionContent TextPositionCenter
                 titreTexth3={`Prévention`}
                 bodyText={`La naturopathie mise sur la prévention, en aidant à instaurer un équilibre de vie qui minimise les risques de maladies et déséquilibres.`}
             />
-            <SectionContent
+            <SectionContent TextPositionCenter
                 titreTexth3={`Regard holistique`}
                 bodyText={`La naturopathie ne se contente pas de voir les symptômes, mais la personne dans sa globalité : physique, émotionnelle et mentale.`}
             />

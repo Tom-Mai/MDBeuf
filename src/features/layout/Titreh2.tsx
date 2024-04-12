@@ -13,11 +13,11 @@ export const Titreh2 = ({textContent,h2Black}: Titreh2Props) => {
         <Typography variant='h2' component="h2"
         sx={{
             fontFamily: 'Oswald',
-            fontWeight:"700",
+            fontWeight:"300",
             color: h2Black ? "#323334" : "#b89b3e",
             textAlign: "center",
             lineHeight:"1.1",
-            fontSize:"3rem",
+            fontSize:"3.5rem",
             wordWrap: "break-word",
             cursor:"auto",
         }}>
