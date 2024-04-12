@@ -34,8 +34,9 @@ interface SectionContentProps {
     H3Color? : boolean;
     H3Position? : boolean;
     ImageRounded? : React.ReactNode;
+    TextPositionCenter? : React.ReactNode;
 }
-export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, imgToLeft,xAxes, H3Color, H3Position, ImageRounded }: SectionContentProps) => {
+export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, imgToLeft,xAxes, H3Color, H3Position, ImageRounded, TextPositionCenter }: SectionContentProps) => {
 
     const highlightWords = ["naturopathie", "bien-être", "hygiène de vie", "méthodes de soins", "approche holistique", "auto-guérison", "naturopathe", "médecine traditionnelle", "phytologie", "réflexologie plantaire"];
 
@@ -48,7 +49,7 @@ export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, img
                     lineHeight: "1.35",
                     fontSize: "16px",
                     color: '#707070',
-                    textAlign: "justify",
+                    textAlign: TextPositionCenter? "center" : "justify",
                 }}>
                     {formattedBodyText}
                 </Typography>}
@@ -58,6 +59,7 @@ export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, img
     const imgComponent = imgSrc &&
         <Grid item sx={{
             maxWidth: '400px',
+            
             margin: 'auto',
             "@media (max-width:1200px)": {
                 width: "100%",
@@ -67,7 +69,7 @@ export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, img
             <Image src={imgSrc.src} alt={imgSrc.alt} style={{
                 maxWidth: '100%',  // Pour la réactivité
                 height: 'auto', //maintient le ratio
-                borderRadius: ImageRounded? '80%' : '0%',
+                borderRadius: ImageRounded? '50%' : '0%',
                 // borderRadius:"50%", impact toutes les images, et ne veux que celle de about me
                 boxShadow: '0px 4px 5px -2px rgba(0,0,0,0.2), 0px 7px 10px 1px rgba(0,0,0,0.14), 0px 2px 16px 1px rgba(0,0,0,0.12)'
             }} />

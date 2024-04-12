@@ -23,17 +23,17 @@ const HomePage = () => {
                 En tant que naturopathe à Vénissieux, je m’appuie sur trois principes clés  `}
 
             />
-            <SectionContent ImageRounded // props indiquant si l'image prend RoundedBorder 50% if true
+            <SectionContent TextPositionCenter ImageRounded // props indiquant si l'image prend RoundedBorder 50% if true 
                 titreTexth3={`L'auto-guérison`}
                 bodyText={`Le corps a une capacité innée à se guérir. La naturopathie vise à soutenir ce processus.`}
                 imgSrc={Images.hyginealimentaire[1]}
             />
-            <SectionContent ImageRounded // props indiquant si l'image prend RoundedBorder 50% if true
+            <SectionContent TextPositionCenter ImageRounded // props indiquant si l'image prend RoundedBorder 50% if true
                 titreTexth3={`La prévention`}
                 bodyText={`Mieux vaut prévenir que guérir. Adopter de bonnes habitudes est le premier pas vers une bonne santé.`}
                 imgSrc={Images.hyginealimentaire[2]}
             />
-            <SectionContent ImageRounded // props indiquant si l'image prend RoundedBorder 50% if true
+            <SectionContent TextPositionCenter ImageRounded // props indiquant si l'image prend RoundedBorder 50% if true
                 titreTexth3={`Le traitement de la cause`}
                 bodyText={`Au lieu de simplement traiter les symptômes, la naturopathie cherche à comprendre et traiter la cause profonde des déséquilibres.`}
                 imgSrc={Images.hyginealimentaire[3]}
