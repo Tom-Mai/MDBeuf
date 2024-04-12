@@ -3,9 +3,10 @@ import Typography from '@mui/material/Typography';
 // Definir une iterface pour props 
 interface Titreh2Props {
     textContent: React.ReactNode;
+    h2Black?: React.ReactNode;
 }
 
-export const Titreh2 = ({textContent}: Titreh2Props) => {
+export const Titreh2 = ({textContent,h2Black}: Titreh2Props) => {
 
     return(
 
@@ -13,7 +14,7 @@ export const Titreh2 = ({textContent}: Titreh2Props) => {
         sx={{
             fontFamily: 'Oswald',
             fontWeight:"700",
-            color: "#b89b3e",
+            color: h2Black ? "#323334" : "#b89b3e",
             textAlign: "center",
             lineHeight:"1.1",
             fontSize:"3rem",
