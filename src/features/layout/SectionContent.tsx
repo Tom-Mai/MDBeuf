@@ -48,7 +48,7 @@ export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, img
                     lineHeight: "1.35",
                     fontSize: "16px",
                     color: '#707070',
-                    textAlign: "center",
+                    textAlign: "justify",
                 }}>
                     {formattedBodyText}
                 </Typography>}
