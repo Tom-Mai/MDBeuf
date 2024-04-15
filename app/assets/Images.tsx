@@ -18,6 +18,7 @@ import BannerContact from "./BannerContact.webp";
 import photoOfNature from "./photoOfNature.webp";
 import handsphoto1 from "./handsphoto1.webp";
 import photohandfruits from "./photohandfruits.webp";
+import Arbre from "./Arbre.webp";
 
 export const Images = {
     Maurinedb :[
@@ -43,6 +44,12 @@ export const Images = {
         src:photohandfruits,
         alt:"hand photo of nature"
     },
+],
+PNG:[
+    {
+        src: Arbre,
+        alt:"Arbre"
+    }
 ],
 Banner:[
     {
