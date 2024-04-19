@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import { Titreh2 } from "./Titreh2";
 import { Titreh3 } from "./Titreh3";
 import Image, { StaticImageData } from "next/image";
-//  fonction qui prend mon tableau de mots cles, et si le mot cles se trouve dans la props bodytext, celui ci prends une autre classe de style afin d'être mis en évidence
+//  fonction qui prend mon tableau de mots cles, et si le mot cles se trouve dans la props textContent, celui ci prends une autre classe de style afin d'être mis en évidence
 function highlightText(text: string, keywords: string[]): React.ReactNode {
     const regex = new RegExp(`\\b(${keywords.join('s?\\b|')}s?\\b)`, 'gi');
     return text.split(regex).map((part, index) => {
@@ -23,22 +23,24 @@ interface SectionContentProps {
         src: StaticImageData;
         alt: string;
     };
-    bodyText?: React.ReactNode;
-    titreTexth2?: React.ReactNode;
-    titreTexth3?: React.ReactNode;
-    imgToLeft?: boolean;
-    xAxes?: boolean;
-    H3Color? : boolean;
-    H2Color? : boolean;
-    H3Position? : boolean;
-    ImageRounded? : React.ReactNode;
-    TextPositionCenter? : React.ReactNode;
+    textContent?: React.ReactNode;
+    titleH2?: React.ReactNode;
+    titleH3?: React.ReactNode;
+    isImageToLeft?: boolean;
+    isHorizontalLayout?: boolean;
+    h3Theme?: boolean;
+    h2Theme?: boolean;
+    alignH3?: boolean;
+    isImageRounded?: React.ReactNode;
+    isTextCentered?: React.ReactNode;
+    profileSize? :React.ReactNode;
+    disableBoxShadow? :React.ReactNode;
 }
-export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, imgToLeft,xAxes, H3Color,H2Color, H3Position, ImageRounded, TextPositionCenter }: SectionContentProps) => {
+export const SectionContent = ({ imgSrc, textContent, titleH2, titleH3, isImageToLeft, isHorizontalLayout, h3Theme, h2Theme, alignH3, isImageRounded, isTextCentered, profileSize, disableBoxShadow }: SectionContentProps) => {
     const highlightWords = ["naturopathie", "bien-être", "hygiène de vie", "méthodes de soins", "approche holistique", "auto-guérison", "naturopathe", "médecine traditionnelle", "phytologie", "réflexologie plantaire"];
-    const formattedBodyText = typeof bodyText === 'string' ? highlightText(bodyText, highlightWords) : bodyText;
+    const formattedBodyText = typeof textContent === 'string' ? highlightText(textContent, highlightWords) : textContent;
     const textComponent = (
-        <Grid item xs={12} lg={xAxes ? 6 : 12}>
+        <Grid item xs={12} lg={isHorizontalLayout ? 6 : 12}>
             {formattedBodyText &&
                 <Typography variant='body1' sx={{
                     marginTop: '20px',
@@ -46,8 +48,8 @@ export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, img
                     fontSize: "16px",
                     color: '#707070',
                     textAlign: "justify",
-                    "@media (min-width:425px)":{
-                        textAlign:TextPositionCenter? "center" : "justify",
+                    "@media (min-width:425px)": {
+                        textAlign: isTextCentered ? "center" : "justify",
                     }
                 }}>
                     {formattedBodyText}
@@ -56,19 +58,21 @@ export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, img
     );
     const imgComponent = imgSrc &&
         <Grid item sx={{
-            maxWidth: '400px',
+            width: profileSize ? "400px" : '100%',
             margin: 'auto',
+            position: 'relative',
             "@media (max-width:1200px)": {
                 width: "100%",
                 justifyContent: "center",
             },
         }}>
-            <Image src={imgSrc.src} alt={imgSrc.alt} style={{
+            <Image src={imgSrc.src} alt={imgSrc.alt}  style={{
                 maxWidth: '100%',  // Pour la réactivité
                 height: 'auto', //maintient le ratio
-                borderRadius: ImageRounded? '50%' : '0%',
-                // borderRadius:"50%", impact toutes les images, et ne veux que celle de about me
-                boxShadow: '0px 4px 5px -2px rgba(0,0,0,0.2), 0px 7px 10px 1px rgba(0,0,0,0.14), 0px 2px 16px 1px rgba(0,0,0,0.12)'
+                borderRadius: isImageRounded ? '50%' : '0%',
+                // borderRadius:"50%", todo : props :  impact toutes les images, et ne veux que celle de about me
+                boxShadow: disableBoxShadow ? "" : '0px 4px 5px -2px rgba(0,0,0,0.2), 0px 7px 10px 1px rgba(0,0,0,0.14), 0px 2px 16px 1px rgba(0,0,0,0.12)',
+
             }} />
         </Grid>;
     return (
@@ -81,11 +85,11 @@ export const SectionContent = ({ imgSrc, bodyText, titreTexth2, titreTexth3, img
                 },
             }}
         >
-            {titreTexth2 && <Titreh2 textContent={titreTexth2} h2Black={H2Color} />}
-            {titreTexth3 && <Titreh3 textContent={titreTexth3} h3Black={H3Color} H3PosLeft={H3Position} />}
+            {titleH2 && <Titreh2 headingText={titleH2} h2Black={h2Theme} />}
+            {titleH3 && <Titreh3 headingText={titleH3} h3Black={h3Theme} H3PosLeft={alignH3} />}
             <Grid container spacing={2} sx={{ justifyContent: 'space-evenly' }}>
-                {imgToLeft ? imgComponent : textComponent}
-                {imgToLeft ? textComponent : imgComponent}
+                {isImageToLeft ? imgComponent : textComponent}
+                {isImageToLeft ? textComponent : imgComponent}
             </Grid>
         </Box>
     );
