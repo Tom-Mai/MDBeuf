@@ -2,11 +2,11 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 // Definir une iterface pour props 
 interface Titreh2Props {
-    textContent: React.ReactNode;
+    headingText: React.ReactNode;
     h2Black?: React.ReactNode;
 }
 
-export const Titreh2 = ({textContent,h2Black}: Titreh2Props) => {
+export const Titreh2 = ({headingText,h2Black}: Titreh2Props) => {
 
     return(
 
@@ -21,7 +21,7 @@ export const Titreh2 = ({textContent,h2Black}: Titreh2Props) => {
             wordWrap: "break-word",
             cursor:"auto",
         }}>
-            {textContent} 
+            {headingText} 
         </Typography>
 
     )
