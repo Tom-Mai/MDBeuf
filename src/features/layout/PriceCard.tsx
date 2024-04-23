@@ -55,13 +55,13 @@ export const PriceCard = ({ firstTitle, secondTitle, Paragraph, price, logo }: P
                         {prices}€
                     </Typography>
                 ))}
-                <CardActions sx={{ justifyContent: "center" }}>
+                <CardActions sx={{ justifyContent: "center"}}>
                     <ThemeProvider theme={ActionButton}>
                         <Link href='#'>
                             <Button
                                 sx={{
-                                    width: '44px',
-                                    height: '44px',
+                                    width: '5em',
+                                    height: '5em',
                                     "@media (min-width:768px)": {
                                         width: "19em",
                                         height: "auto",
