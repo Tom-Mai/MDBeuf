@@ -1,46 +1,58 @@
-
 /* App Style  */
 
-*{ 
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 1vh;
 }
-:root{
---Title: #4a4a54;
---default-color: black; 
---bgColor : #f9f9f9;
---AppBar :rgba(224, 224, 213, 0.8);
+
+:root {
+  --Title: #4a4a54;
+  --default-color: black;
+  --bgColor: #f9f9f9;
+  --AppBar: rgba(224, 224, 213, 0.8);
 }
-.highlight{
+
+.highlight {
   font-size: 16px;
-  color:#b08d57;
+  color: #b08d57;
 }
-.menu-typography{
+
+.menu-typography {
   font-size: 1.5rem;
 }
+
 .App {
   max-width: 100%;
   text-align: center;
   background-color: var(--bgColor);
   min-height: 100vh;
   color: var(--default-color);
-  }
-  
-  h1,h2,h3,h4,h5,h6 {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--Title);
-  }
-  a, li{
+}
+
+a,
+li {
   text-decoration: none;
   list-style: none;
-  color:inherit;
-  }
-  .BOUTON{
+  color: inherit;
+}
+
+.BOUTON {
   background-color: #ebba99;
-  }
-  /* Heroes section */
-  .herosSection{
+}
+
+/* Heroes section */
+.herosSection {
   width: 100%;
   height: 75vh;
   position: relative;
@@ -49,21 +61,34 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-   margin: 0;
+  margin: 0;
   padding: 0;
-  }
-  .herosImg{
-   /* max-width: 100%; */
+}
+
+.herosImg {
+  /* max-width: 100%; */
   max-height: 100%;
   object-fit: cover;
+}
+
+@media (min-width:835px) {
+  .herosSection {
+    height: 80vh;
+    object-fit: cover;
   }
-  @media (min-width:835px) {
-  .herosSection{
-      height: 80vh;
-      object-fit: cover;
+
+  .herosImg {
+    max-height: 100vh;
+    min-width: 100%;
   }
-  .herosImg{
-      max-height: 100vh;
-      min-width: 100%;
+}
+
+.wrapper {
+  margin-left: 5vw;
+  margin-right: 5vw;
+
+  @media (min-width: 425px) {
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
-  }
+}

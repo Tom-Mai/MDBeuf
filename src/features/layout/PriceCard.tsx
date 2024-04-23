@@ -25,6 +25,10 @@ export const PriceCard = ({ firstTitle, secondTitle, Paragraph, price, logo }: P
                     fontSize: "25px",
                     cursor: "auto",
                     textTransform: "uppercase",
+                    "@media (min-width:900px) and (max-width:1040px)":{
+                        fontSize:"20px"
+                    },
+                    
                 }}>
                     {firstTitle}
                 </Typography>

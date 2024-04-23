@@ -25,7 +25,8 @@ const Aboutme = () => {
     const age = AgeCalcul();
     return (<Grid>
         <HeroSection titreh1="Qui suis-je ?" imgSrc={Images.Banner[0]} imgAlt="image qui suis-je"/>
-        <SectionContent isHorizontalLayout isImageRounded
+        <Grid className="wrapper">
+        <SectionContent isHorizontalLayout isImageRounded 
             // eslint-disable-next-line react/no-unescaped-entities
             titleH2={<>Maurine DuBeuf {age} ans</> }
             titleH3={`À propos de moi`}h3Theme alignH3
@@ -36,7 +37,7 @@ const Aboutme = () => {
             />
             <SectionContent titleH3={`Mes diplômes :`} h3Theme alignH3 textContent={`- HEILPRAKTIKER CERS - TA FORMATION FERNEY VOLTAIRE
             - MASTER NUTRITION HUMAINE - UNIVERSITÉ NANTES`}/>
-
+</Grid>
     </Grid>
     
     )

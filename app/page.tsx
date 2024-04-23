@@ -16,6 +16,7 @@ const HomePage = () => {
                 imgAlt="#"
                 imgSrc={Images.Banner[1]}
             />
+            <Grid className="wrapper">
             <SectionContent
                 titleH2={`Qu'est-ce que la Naturopathie ?`}
                 textContent={`La naturopathie est bien plus qu’une approche médicale : c’est une philosophie, un art de vivre. Voici un aperçu de cette pratique ancestrale.
@@ -112,6 +113,7 @@ const HomePage = () => {
                     `En France,nous avons tendance à attendre d’être malade (et d'atteindre le stade 4) avant de consulter. Alors que nous pouvons agir bien avant le stade de la maladie afin d'éviter certaines souffrances.`
                 }
             /> */}
+        </Grid>
         </Grid>
     )
 }

@@ -17,6 +17,7 @@ export default function prestations() {
   return (
     <Grid justifyContent="center" width='100%'>
       <HeroSection titreh1="Mes accompagnements" imgSrc={Images.Banner[2]} imgAlt="Image alt" />
+      <Grid className="wrapper">
       <SectionContent
         titleH2="Consultations en Naturopathie"
         textContent="Chaque individu est unique, avec ses propres besoins et objectifs. C’est pourquoi je propose une variété de consultations et d’accompagnements pour répondre à ces besoins spécifiques. Découvrez les différentes manières dont je peux vous accompagner en tant que naturopathe à Vénissieux. "
@@ -72,6 +73,7 @@ export default function prestations() {
 
       </PriceComponent>
 
+    </Grid>
     </Grid>
   )
 }

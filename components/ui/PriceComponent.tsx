@@ -10,7 +10,7 @@ interface PriceComponentProps{
 }
 export const PriceComponent = ({children}:PriceComponentProps) => {
     return (
-        <Stack  direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center" alignItems="center"
+        <Stack  direction={{ sm: 'column', md: 'row' }} spacing={2} justifyContent="center" alignItems="center"
         
             sx={{
                 width: '100%',

@@ -60,11 +60,7 @@ export const SectionContent = ({ imgSrc, textContent, titleH2, titleH3, isImageT
         <Grid item sx={{
             width: profileSize ? "400px" : '100%',
             margin: 'auto',
-            position: 'relative',
-            "@media (max-width:1200px)": {
-                width: "100%",
-                justifyContent: "center",
-            },
+            position: 'relative'
         }}>
             <Image src={imgSrc.src} alt={imgSrc.alt}  style={{
                 maxWidth: '100%',  // Pour la réactivité
