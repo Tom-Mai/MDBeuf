@@ -28,7 +28,7 @@ const Aboutme = () => {
         <Grid className="wrapper">
         <SectionContent isHorizontalLayout isImageRounded 
             // eslint-disable-next-line react/no-unescaped-entities
-            titleH2={<>Maurine DuBeuf {age} ans</> }
+            titleH2={<>Maurine DuBeuf, {age} ans</> }
             titleH3={`À propos de moi`}h3Theme alignH3
             textContent={`Je suis une fervente adepte du bien-être au naturel. Dotée d'un caractère chaleureux, ma vocation est d'accompagner et d'aider autrui. Ma passion pour la nutrition m'a menée à obtenir une licence en Sciences pour la santé, suivie d'un master en Nutrition Humaine à Nantes. Mon voyage académique m'a même conduit au Québec le temps de mon mémoire de recherche.
 
