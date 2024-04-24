@@ -12,6 +12,7 @@ import repres9 from './repres9.webp';
 import repres10 from './repres10.webp';
 import MaurineDuBeuf from "./MaurineDuBeuf.webp";
 import BannerAboutme from "./BannerAboutme.webp";
+import BannerWorkshop from "./BannerWorkshop.webp";
 import BannerHomePage from "./BannerHomePage.webp";
 import BannerPrestations from "./BannerPrestations.webp";
 import BannerContact from "./BannerContact.webp";
@@ -82,7 +83,11 @@ Banner:[
     {
         src:BannerContact,
         alt: 'Contact naturopathe'
-    }
+    },
+    {
+        src:BannerWorkshop,
+        alt: 'Ateliers de Naturopathe'
+    },
 ],
 lvlreactcorp:[
     {

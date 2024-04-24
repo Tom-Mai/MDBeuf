@@ -17,7 +17,7 @@ export const Titreh2 = ({headingText,h2Black}: Titreh2Props) => {
             color: h2Black ? "#323334" : "#b89b3e",
             textAlign: "center",
             lineHeight:"1.1",
-            fontSize:"3.5rem",
+            fontSize:"4.5rem",
             wordWrap: "break-word",
             cursor:"auto",
         }}>

@@ -23,6 +23,7 @@ const routes = [
   { path: '/about', label: 'Qui suis-je ?' },
   { path: '/prestations', label: 'Mes accompagnements' },
   { path: '/contact', label: 'Contact' },
+  { path: '/ateliers', label: 'Ateliers' },
 ]
 export default function RootLayout({
   children,
