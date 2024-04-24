@@ -66,7 +66,6 @@ export const SectionContent = ({ imgSrc, textContent, titleH2, titleH3, isImageT
                 maxWidth: '100%',  // Pour la réactivité
                 height: 'auto', //maintient le ratio
                 borderRadius: isImageRounded ? '50%' : '0%',
-                // borderRadius:"50%", todo : props :  impact toutes les images, et ne veux que celle de about me
                 boxShadow: disableBoxShadow ? "" : '0px 4px 5px -2px rgba(0,0,0,0.2), 0px 7px 10px 1px rgba(0,0,0,0.14), 0px 2px 16px 1px rgba(0,0,0,0.12)',
 
             }} />

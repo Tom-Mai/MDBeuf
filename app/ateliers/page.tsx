@@ -5,20 +5,22 @@ import Grid from "@mui/material/Grid";
 import { Images } from "@/app/assets/Images";
 import { HeroSection } from "@/src/features/layout/HeroSection";
 import { SectionContent } from "@/src/features/layout/SectionContent";
+import { Divider } from "@mui/material";
 
 const ateliers = () => {
   return (
     <Grid>
       <HeroSection
         titreh1={"Mes Ateliers"}
-        imgSrc={Images.Banner[0]}
-        imgAlt='Ateliers de NAturopathie'
+        imgSrc={Images.Banner[4]}
+        imgAlt='Ateliers de NAturopathie' 
       />
       <Grid className='wrapper'>
         <SectionContent
           isHorizontalLayout
           titleH2={`Ateliers sur la Nutrition pour Enfants`}
         />
+        <Divider variant="middle"/>
         <SectionContent
           h3Theme
           titleH3={`Découvrir la Nutrition de manière Ludique`}
@@ -31,6 +33,9 @@ const ateliers = () => {
           titleH3={`Éducation Nutritionnelle:`}
           textContent={`Faire découvrir les principes de base de la nutrition de manière adaptée à l'âge.`}
         />
+        <Divider variant="middle"/>
+
+{/* TODO : mettre les section suiviantes dans une " card mui" */}
 
         <SectionContent
           h3Theme
@@ -38,6 +43,8 @@ const ateliers = () => {
           titleH3={`Amélioration des Habitudes Alimentaires:`}
           textContent={`Encourager des choix alimentaires sains et équilibrés.`}
         />
+        <Divider variant="middle"/>
+
         <SectionContent
           h3Theme
           isTextCentered
