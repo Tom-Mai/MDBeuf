@@ -30,13 +30,14 @@ interface SectionContentProps {
     isHorizontalLayout?: boolean;
     h3Theme?: boolean;
     h2Theme?: boolean;
+    IsFontBold?: boolean;
     alignH3?: boolean;
     isImageRounded?: React.ReactNode;
     isTextCentered?: React.ReactNode;
     profileSize? :React.ReactNode;
     disableBoxShadow? :React.ReactNode;
 }
-export const SectionContent = ({ imgSrc, textContent, titleH2, titleH3, isImageToLeft, isHorizontalLayout, h3Theme, h2Theme, alignH3, isImageRounded, isTextCentered, profileSize, disableBoxShadow }: SectionContentProps) => {
+export const SectionContent = ({ IsFontBold, imgSrc, textContent, titleH2, titleH3, isImageToLeft, isHorizontalLayout, h3Theme, h2Theme, alignH3, isImageRounded, isTextCentered, profileSize, disableBoxShadow }: SectionContentProps) => {
     const highlightWords = ["naturopathie", "bien-être", "hygiène de vie", "méthodes de soins", "approche holistique", "auto-guérison", "naturopathe", "médecine traditionnelle", "phytologie", "réflexologie plantaire"];
     const formattedBodyText = typeof textContent === 'string' ? highlightText(textContent, highlightWords) : textContent;
     const textComponent = (
@@ -46,7 +47,7 @@ export const SectionContent = ({ imgSrc, textContent, titleH2, titleH3, isImageT
                     marginTop: '20px',
                     lineHeight: "1.35",
                     fontSize: "16px",
-                    color: '#707070',
+                    color: ' #666666',
                     textAlign: "justify",
                     "@media (min-width:425px)": {
                         textAlign: isTextCentered ? "center" : "justify",
@@ -81,7 +82,7 @@ export const SectionContent = ({ imgSrc, textContent, titleH2, titleH3, isImageT
             }}
         >
             {titleH2 && <Titreh2 headingText={titleH2} h2Black={h2Theme} />}
-            {titleH3 && <Titreh3 headingText={titleH3} h3Black={h3Theme} H3PosLeft={alignH3} />}
+            {titleH3 && <Titreh3 headingText={titleH3} Bolder={IsFontBold} h3Black={h3Theme} H3PosLeft={alignH3} />}
             <Grid container spacing={2} sx={{ justifyContent: 'space-evenly' }}>
                 {isImageToLeft ? imgComponent : textComponent}
                 {isImageToLeft ? textComponent : imgComponent}
