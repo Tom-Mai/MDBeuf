@@ -8,4 +8,8 @@ export const PriceCardTheme = styled(Card)(({ theme })=> ({
     padding: theme.spacing(2),
     ...theme.typography.body2,
     textAlign: 'center',
+    transition: "transform 0.3s ease",
+    '&:hover':{
+        transform: "translateY(-5px)",
+    },
 }));
