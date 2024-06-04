@@ -4,7 +4,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { Box, Button, Container, Grid, Typography, FormControl, InputLabel, OutlinedInput, FormHelperText, Modal, TextField } from '@mui/material';
 import PhoneNumberInput from './PhoneNumberInput';
 export const ContactForm = () => {
-  const [state, handleSubmit] = useForm("mdoqvjbe");
+  
   const [firstName, setFirstName] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -12,6 +12,23 @@ export const ContactForm = () => {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [state, formSpreeSubmit] = useForm("mdoqvjbe");
+  const [errors, setErrors] = useState({firstName:'', name:'', email:''});
+  const validate = () =>{
+    const newErrors = {firstName:'', name:'', email:''}
+    if(!firstName) newErrors.firstName = 'Veuillez remplir ce champ';
+    if(!name) newErrors.name='Veuillez remplir ce champ';
+    if(!email || !/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) newErrors.email = 'Veuillez entrer un email valide';
+    setErrors(newErrors);
+    return !Object.values(newErrors).some(error => error !== '');
+  }
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if(validate()){
+      formSpreeSubmit(event)
+    }
+
+  }
   if (state.succeeded) {
     return (
 
@@ -61,6 +78,9 @@ export const ContactForm = () => {
                 autoComplete='firstName'
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
+                error={!!errors.firstName}
+                helperText={errors.firstName}
+                
               />
               {/* <FormControl fullWidth variant="outlined" required>
                 <InputLabel htmlFor="firstName">Prénom</InputLabel>
