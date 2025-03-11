@@ -14,25 +14,29 @@ export const ContactForm = () => {
   const handleClose = () => setOpen(false);
   const [state, formSpreeSubmit] = useForm("mdoqvjbe");
   const [errors, setErrors] = useState({firstName:'', name:'', email:''});
-  const validate = () =>{
-    const newErrors = {firstName:'', name:'', email:''}
-    if(!firstName) newErrors.firstName = 'Veuillez remplir ce champ';
-    if(!name) newErrors.name='Veuillez remplir ce champ';
-    if(!email || !/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(email)) newErrors.email = 'Veuillez entrer un email valide';
+  const validate = () => {
+    const newErrors: typeof errors = { firstName: '', name: '', email: '' };
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+    if (!firstName) newErrors.firstName = 'Veuillez remplir ce champ';
+    if (!name) newErrors.name = 'Veuillez remplir ce champ';
+    if (!email || !emailRegex.test(email)) newErrors.email = 'Veuillez entrer un email valide';
+  
     setErrors(newErrors);
     return !Object.values(newErrors).some(error => error !== '');
-  }
+  };
+  
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if(validate()){
       formSpreeSubmit(event)
     }
-
+    
   }
   if (state.succeeded) {
     return (
 
-
+// TODO : gerer le modal, bouton, quand fermé remet la page comme avant, avec form vide., gerer le style du modal
       <Modal
         open={open}
         onClose={handleClose}
@@ -92,7 +96,8 @@ export const ContactForm = () => {
                   label="Prénom"
                 />
               </FormControl> */}
-              <ValidationError prefix='Prenom' field='firstname' errors={state.errors} />
+              {/* <ValidationError prefix='Prenom' field='firstname' errors={state.errors} /> */}
+              {/* si dessus la ligne n'a pas d'impact */}
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
@@ -105,6 +110,8 @@ export const ContactForm = () => {
                 autoComplete='family-name'
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                error={!!errors.name}
+                helperText={errors.name}
 
               />
               {/* <FormControl fullWidth variant="outlined" required>
@@ -129,6 +136,8 @@ export const ContactForm = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 autoComplete='EMAIL'
+                error={!!errors.email}
+                helperText={errors.email}
               />
               {/* <FormControl fullWidth variant="outlined" required>
                 <InputLabel htmlFor="emailAddress">Adresse Email</InputLabel>
