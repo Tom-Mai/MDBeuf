@@ -57,7 +57,7 @@ export const PriceCard = ({ firstTitle, secondTitle, Paragraph, price, logo }: P
                 ))}
                 <CardActions sx={{ justifyContent: "center"}}>
                     <ThemeProvider theme={ActionButton}>
-                        <Link href='#'>
+                        <Link href='/contact'>
                             <Button
                                 sx={{
                                     width: '5em',
